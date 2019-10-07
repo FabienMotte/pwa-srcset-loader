@@ -270,7 +270,7 @@ srcSetLoader.pitch = function srcSetLoaderPitch(remainingRequest) {
         }
         const newFileLoader = `${fileLoader.path}?${queryString}`;
         wepbLoaders.splice(fileLoaderIndex, 1, newFileLoader);
-        wepbLoaders.push('webp-loader');
+        wepbLoaders.push('webp-loader?{quality:100}');
       }
       outputString = `${outputString}, ${await createResourceObjectString(
         loaderQuery,
